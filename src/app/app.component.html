@@ -1,6 +1,8 @@
 <div>
-  <span>statistique 1 : {{ stat1.titre }}</span><br>
-  <span>statistique 2 : {{ stat2.titre }}</span>
+  <ng-container>
+    <app-statistic-info [stat]=stat1></app-statistic-info><br>
+    <app-statistic-info [stat]="stat2"></app-statistic-info>
+  </ng-container>
 </div>
 
 <router-outlet></router-outlet>
