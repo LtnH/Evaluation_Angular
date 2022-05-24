@@ -1,8 +1,16 @@
 <div>
-  <ng-container>
-    <app-statistic-info [stat]=stat1></app-statistic-info><br>
-    <app-statistic-info [stat]="stat2"></app-statistic-info>
-  </ng-container>
+  <table>
+    <tr>
+      <td>Titre</td>
+      <td>identifiant</td>
+      <td>Valeur</td>
+    </tr>
+    <tr *ngFor="let s of stat">
+      <td>{{ s.titre }}</td>
+      <td>{{ s.identifiant}}</td>
+      <td>{{ s.valeur }}</td>
+    </tr>
+  </table>
 </div>
 
 <router-outlet></router-outlet>
